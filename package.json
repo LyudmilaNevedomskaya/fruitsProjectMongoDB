@@ -1,0 +1,28 @@
+{
+  "name": "fruitsprojectmongodb",
+  "version": "1.0.0",
+  "description": "working with The Native MongoDB Driver",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LyudmilaNevedomskaya/fruitsProjectMongoDB.git"
+  },
+  "keywords": [
+    "The",
+    "Native",
+    "MongoDB",
+    "Driver"
+  ],
+  "author": "Mila Nevedomskaya",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LyudmilaNevedomskaya/fruitsProjectMongoDB/issues"
+  },
+  "homepage": "https://github.com/LyudmilaNevedomskaya/fruitsProjectMongoDB#readme",
+  "dependencies": {
+    "mongodb": "^4.1.4"
+  }
+}
