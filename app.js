@@ -71,13 +71,40 @@ const kiwi = new Fruit({
   review: "Too sweet."
 });
 
-Fruit.insertMany([orange, kiwi], function (err) {
+// Fruit.insertMany([orange, kiwi], function (err) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log("Succesfully added");
+//   }
+// })
+
+
+//READ DATA//////////////////////
+// Fruit.find(function (err, fruits) {
+//   if (err) {
+//     console.log(err);
+//   } else {
+//     console.log(fruits);
+//   }
+// })
+
+Fruit.find(function (err, fruits) {
   if (err) {
     console.log(err);
   } else {
-    console.log("Succesfully added");
+
+    ///////////CLOSING THE CONNECTION//////
+
+    mongoose.connection.close();
+
+    fruits.forEach(item => {
+      console.log(item.name);
+    })
   }
 })
+
+
 
 
 
