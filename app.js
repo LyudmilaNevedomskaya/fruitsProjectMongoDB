@@ -28,8 +28,15 @@ mongoose.connect("mongodb://localhost:27017/fruitsDB");
 // });
 
 const fruitSchema = new mongoose.Schema({
-  name: String,
-  rating: Number,
+  name: {
+    type: String,
+    require: [true, "Name field is require"]
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 10
+  },
   review: String
 });
 
