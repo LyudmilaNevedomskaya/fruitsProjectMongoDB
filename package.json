@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/LyudmilaNevedomskaya/fruitsProjectMongoDB#readme",
   "dependencies": {
-    "mongodb": "^4.1.4"
+    "mongodb": "^4.1.4",
+    "mongoose": "^6.0.12"
   }
 }
