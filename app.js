@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 
 
 // // Connection URL
-// const url = 'mongodb://localhost:27017';
+// // const url = 'mongodb://localhost:27017';
 mongoose.connect("mongodb://localhost:27017/fruitsDB");
 
 // // Database Name
@@ -41,7 +41,46 @@ const fruit = new Fruit({
   review: "Nice fruit."
 });
 
-fruit.save();
+//fruit.save();
+
+
+const personSchema = new mongoose.Schema({
+  name: String,
+  age: Number
+});
+
+const Person = mongoose.model("Person", personSchema);
+
+const person = new Person({
+  name: "Mila",
+  age: 35
+});
+
+//person.save();
+
+//ADDING SEVERAL DATA
+const orange = new Fruit({
+  name: "Orange",
+  rating: 9,
+  review: "My favourite."
+});
+
+const kiwi = new Fruit({
+  name: "Kiwi",
+  rating: 3,
+  review: "Too sweet."
+});
+
+Fruit.insertMany([orange, kiwi], function (err) {
+  if (err) {
+    console.log(err);
+  } else {
+    console.log("Succesfully added");
+  }
+})
+
+
+
 
 
 // const insertDocuments = function (db, callback) {
